@@ -1660,7 +1660,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-nav li.current a {
     font-family: "montserrat-extrabold", sans-serif;
-    color: #af2b2b;
+    color: #71818e;
 }
 
 
@@ -1751,7 +1751,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 100%;
     height: 100%;
     opacity: .5;
-    background-color: #111111;
+    background-color: #a7ccee;
 }
 
 .no-js .s-home {
@@ -1775,7 +1775,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .home-content h3 {
     font-family: "montserrat-bold", sans-serif;
     font-size: 1.8rem;
-    color: #862121;
+    color: #71818e;
     text-transform: uppercase;
     letter-spacing: .5rem;
     position: relative;
@@ -1789,7 +1789,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     content: "";
     width: 60px;
     height: 2px;
-    background-color: #862121;
+    background-color: #71818e;
     margin-top: -1.5px;
     position: absolute;
     left: 0;
@@ -1852,8 +1852,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll a::after {
-    border-bottom: 2px solid #922424;
-    border-right: 2px solid #922424;
+    border-bottom: 2px solid #71818e;
+    border-right: 2px solid #71818e;
     content: '';
     display: block;
     height: 8px;
@@ -1927,7 +1927,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-social span {
-    color: #af2b2b;
+    color: #71818e;
     right: 3.6rem;
     font-size: 1.3rem;
     opacity: 0;
