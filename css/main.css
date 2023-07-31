@@ -1340,7 +1340,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .blog-list article {
-    margin-bottom: 7.2rem;
+    margin-bottom: 20.2rem;
 }
 
 .blog-list article:nth-child(2n+1) {
