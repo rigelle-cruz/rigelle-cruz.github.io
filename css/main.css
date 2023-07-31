@@ -1334,6 +1334,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ## blog-list - (_common-styles.scss)
  * ------------------------------------------------------------------- */
 
+.image-align {
+    margin-top: 100px;
+}
+
 .blog-list {
     margin-top: 6rem;
     margin-left: 0;
