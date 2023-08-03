@@ -1338,6 +1338,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-top: 100px;
 }
 
+.video-align {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+
 .blog-list {
     margin-top: 6rem;
     margin-left: 0;
