@@ -1333,6 +1333,20 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /* ------------------------------------------------------------------- 
  * ## blog-list - (_common-styles.scss)
  * ------------------------------------------------------------------- */
+ .container {
+    position: relative;
+    display: inline-block;
+}
+
+.container img {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: filter 0.3s;
+}
+
+.container:hover img {
+    filter: brightness(30%);
+    cursor: pointer;
+}
 
  #videoPopup {
     position: fixed;
@@ -1368,12 +1382,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-top: 100px;
 }
 
-.video-align {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-
-}
 
 .blog-list {
     margin-top: 6rem;

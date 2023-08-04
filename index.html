@@ -137,12 +137,6 @@
                 <h1>Check Out My Work!</h1>
             </div>
         </div>
-        <div class="video-align">
-        <video width="800" controls>
-            <source src="images/projects/bnana.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
-        </div>
 
         <div class="row blog-content">
             <div class="col-full">
@@ -150,11 +144,14 @@
                 <div class="blog-list block-1-2 block-tab-full">
 
                     <article class="col-block">
-                        <div class="image-align container">
-                            <img src="images/projects/bnana-homepage.jpg" alt="project" data-video="images/projects/bnana.mp4" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)">
+                        <div class="container">
+                            <img src="images/projects/bnana-homepage.jpg" alt="project" data-video="images/projects/bnana.mp4">
+                            <div class="videoOverlay">
+                                <span>(click image above to watch video walk through)</span>
+                            </div>
                         </div>
-
-                        <div id="videoPopup" class="popup">
+                        
+                          <div id="videoPopup" class="popup">
                             <div class="exitButton" onclick="hideVideoPlayer()">&times;</div>
                             <video controls id="videoPlayer">
                               <source src="images/projects/bnana.mp4" type="video/mp4">
