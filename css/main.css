@@ -1344,7 +1344,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .container:hover img {
-    filter: brightness(30%);
+    filter: brightness(50%);
     cursor: pointer;
 }
 
