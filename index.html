@@ -241,12 +241,20 @@
                     </article>
 
                     <article class="col-block">
-                        <div class="image-align">
-                            <video width="420" height="340" controls>
-                                <source src="images/projects/comfy.mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                              </video>
+                        <div class="container image-align">
+                            <img src="images/projects/cozy.jpg" alt="project" data-video="images/projects/comfy.mp4">
+                            <div class="videoOverlay">
+                                <span style="font-family: 'montserrat-light', sans-serif;font-size: 15px;">(click image above to watch video)</span>
+                            </div>
                         </div>
+                        
+                          <div id="videoPopup" class="popup">
+                            <div class="exitButton" onclick="hideVideoPlayer()">&times;</div>
+                            <video controls id="videoPlayer">
+                              <source src="images/projects/bnana.mp4" type="video/mp4">
+                            </video>
+                          </div>
+
                     </article>
 
                     <article class="col-block">
@@ -264,10 +272,10 @@
 
                             This is a visual concept for a project that I will be building. 
                             <br><br>
-                            
+
                             <strong>Technologies Used:</strong> Typescript, React, SQlite (with Knex), HTML and CSS
                             <br><br>
-                            <strong>Other Tools Used:</strong> Photoshop, Procreate
+                            <strong>Other Tools Used:</strong> Photoshop, Procreate, Adobe Premiere Pro
                             <br><br>
                             in progress...
                         </p>
