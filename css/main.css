@@ -1,72 +1,5 @@
-/* =================================================================== 
- *
- *  Hola v1.0 Main Stylesheet
- *  10-02-2017
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # webfonts and iconfonts
- *  # base style overrides
- *      ## links
- *  # typography & general theme styles
- *      ## lists
- *      ## responsive video container
- *      ## floated image
- *      ## tables
- *      ## spacing
- *      ## pace.js styles - minimal
- *  # forms
- *      ## style placeholder text
- *      ## Change Autocomplete styles in Chrome
- *  # buttons
- *  # additional components
- *      ## alert box
- *      ## additional typo styles
- *      ## skillbars
- *  # common and reusable theme styles 
- *      ## section intro
- *      ## blog-list
- *  # header styles
- *      ## header logo
- *      ## mobile menu toggle
- *      ## navigation
- *  # home
- *      ## home content
- *      ## home social
- *      ## home animations
- *  # about
- *      ## timeline
- *  # works
- *      ## bricks/masonry
- *  # testimonials
- *  # blog
- *  # cta
- *  # stats
- *  # contact
- *  # footer
- *      ## go to top
- *  # blog styles
- *      ## blog page header
- *      ## blog content
- *      ## comments
- *
- * =================================================================== */
-
-
-/* ===================================================================
- * # webfonts and iconfonts - (_document-setup.scss)
- *
- * ------------------------------------------------------------------- */
-
 @import url("iconic/css/iconmonstr-iconic-font.min.css");
 @import url("fonts.css");
-
-
-
-/* ===================================================================
- * # base style overrides - (_document-setup.scss)
- *
- * ------------------------------------------------------------------- */
 
 html {
     font-size: 10px;
@@ -114,7 +47,7 @@ a:focus {
 
 
 /* ===================================================================
- * # typography & general theme styles - (_document-setup.scss) 
+ * # typography & general theme styles 
  * 
  * ------------------------------------------------------------------- */
 
@@ -337,7 +270,7 @@ hr {
 
 
 /* ------------------------------------------------------------------- 
- * ## Lists - (_document-setup.scss)  
+ * ## Lists 
  * ------------------------------------------------------------------- */
 
 ol {
@@ -395,7 +328,7 @@ dd {
 
 
 /* ------------------------------------------------------------------- 
- * ## responsive video container - (_document-setup)
+ * ## responsive video container
  * ------------------------------------------------------------------- */
 
 .video-container {
@@ -418,7 +351,7 @@ dd {
 
 
 /* ------------------------------------------------------------------- 
- * ## floated image - (_document-setup)  
+ * ## floated image 
  * ------------------------------------------------------------------- */
 
 img.pull-right {
@@ -431,7 +364,7 @@ img.pull-left {
 
 
 /* ------------------------------------------------------------------- 
- * ## tables - (_document-setup.scss)  
+ * ## tables 
  * ------------------------------------------------------------------- */
 
 table {
@@ -471,7 +404,7 @@ th:last-child, td:last-child {
 
 
 /* ------------------------------------------------------------------- 
- * ## Spacing - (_document-setup.scss)  
+ * ## Spacing 
  * ------------------------------------------------------------------- */
 
 button, .btn {
@@ -501,7 +434,7 @@ form,
 
 
 /* ------------------------------------------------------------------- 
- * ## pace.js styles - minimal  - (_document-setup.scss)
+ * ## pace.js styles 
  * ------------------------------------------------------------------- */
 
 .pace {
@@ -533,7 +466,7 @@ form,
 
 
 /* ===================================================================
- * preloader - (_preloader-2.scss)
+ * preloader 
  *
  * ------------------------------------------------------------------- */
 
@@ -593,177 +526,7 @@ form,
 
 
 /* ===================================================================
- * # forms - (_forms.scss)
- *
- * ------------------------------------------------------------------- */
-
-fieldset {
-    border: none;
-}
-
-input[type="email"], 
-input[type="number"], 
-input[type="search"], 
-input[type="text"], 
-input[type="tel"], 
-input[type="url"], 
-input[type="password"], 
-textarea, select {
-    display: block;
-    height: 6rem;
-    padding: 1.5rem 0;
-    border: 0;
-    outline: none;
-    color: #333333;
-    font-family: "montserrat-regular", sans-serif;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    max-width: 100%;
-    background: transparent;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.ss-custom-select {
-    position: relative;
-    padding: 0;
-}
-
-.ss-custom-select select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    margin: 0;
-    line-height: 3rem;
-    vertical-align: middle;
-}
-
-.ss-custom-select select option {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.ss-custom-select select::-ms-expand {
-    display: none;
-}
-
-.ss-custom-select::after {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-    border-right: 2px solid rgba(0, 0, 0, 0.5);
-    content: '';
-    display: block;
-    height: 8px;
-    width: 8px;
-    margin-top: -7px;
-    pointer-events: none;
-    position: absolute;
-    right: 2.4rem;
-    top: 50%;
-    -webkit-transform-origin: 66% 66%;
-    -ms-transform-origin: 66% 66%;
-    transform-origin: 66% 66%;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
-}
-
-
-/* IE9 and below */
-
-.oldie .ss-custom-select::after {
-    display: none;
-}
-
-textarea {
-    min-height: 25rem;
-}
-
-input[type="email"]:focus, 
-input[type="number"]:focus, 
-input[type="search"]:focus, 
-input[type="text"]:focus, 
-input[type="tel"]:focus, 
-input[type="url"]:focus, 
-input[type="password"]:focus, 
-textarea:focus, select:focus {
-    color: #000000;
-    border-bottom: 2px solid black;
-}
-
-label, legend {
-    font-family: "montserrat-bold", sans-serif;
-    font-size: 1.4rem;
-    margin-bottom: .9rem;
-    line-height: 1.714;
-    color: #0D0A0B;
-    display: block;
-}
-
-input[type="checkbox"], input[type="radio"] {
-    display: inline;
-}
-
-label > .label-text {
-    display: inline-block;
-    margin-left: 1rem;
-    font-family: "montserrat-regular", sans-serif;
-    line-height: inherit;
-}
-
-label > input[type="checkbox"], label > input[type="radio"] {
-    margin: 0;
-    position: relative;
-    top: .15rem;
-}
-
-
-/* ------------------------------------------------------------------- 
- * ## style placeholder text - (_forms.scss)
- * ------------------------------------------------------------------- */
-
-::-webkit-input-placeholder {
-    color: #6c6c6c;
-}
-
-:-moz-placeholder {
-    color: #6c6c6c;
-    /* Firefox 18- */
-}
-
-::-moz-placeholder {
-    color: #6c6c6c;
-    /* Firefox 19+ */
-}
-
-:-ms-input-placeholder {
-    color: #6c6c6c;
-}
-
-.placeholder {
-    color: #6c6c6c !important;
-}
-
-
-/* ------------------------------------------------------------------- 
- * ## Change Autocomplete styles in Chrome - (_forms.scss)
- * ------------------------------------------------------------------- */
-
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-    -webkit-text-fill-color: #cf3e3e;
-    transition: background-color 5000s ease-in-out 0s;
-}
-
-
-
-/* ===================================================================
- * # buttons - (_buttons.scss)
+ * # buttons 
  *
  * ------------------------------------------------------------------- */
 
@@ -3643,7 +3406,7 @@ article.blog-single .blog-content {
 
 
 /* -------------------------------------------------------------------
- * ## blog content - _blog.scss
+ * ## blog content
  * ------------------------------------------------------------------- */
 
 .blog-content-wrap {
@@ -3912,138 +3675,4 @@ article.blog-single .blog-content {
 }
 
 
-/* -------------------------------------------------------------------
- * ## comments - _blog.scss
- * ------------------------------------------------------------------- */
 
-.comments-wrap {
-    background-color: #f0f0f0;
-    padding: 8.4rem 0 9rem;
-}
-
-
-/* comments
- * -------------------------------------------------- */
-
-#comments {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-    max-width: 940px;
-}
-
-#comments h3 {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-}
-
-#comments ol, #comments ul {
-    list-style: none;
-}
-
-.commentlist {
-    margin: 3rem 0 5.4rem;
-    padding: 0;
-}
-
-.commentlist > .comment {
-    position: relative;
-    list-style: none;
-    margin: 0;
-    padding: 1.8rem 0;
-    padding-left: 14%;
-}
-
-.comment__avatar {
-    position: absolute;
-    left: 0;
-    display: block;
-    height: 6rem;
-    width: 6rem;
-}
-
-.comment__avatar img {
-    margin-top: 0.6rem;
-    height: 6rem;
-    width: 6rem;
-    border-radius: 100%;
-}
-
-.comment__info cite {
-    font-family: "montserrat-bold", sans-serif;
-    font-size: 1.8rem;
-    font-style: normal;
-    color: #0D0A0B;
-}
-
-.comment__meta {
-    font-family: "montserrat-regular", sans-serif;
-    font-size: 1.45rem;
-    line-height: 3rem;
-    font-style: normal;
-    display: block;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.comment__meta .reply {
-    font-family: "montserrat-bold", sans-serif;
-}
-
-.comment__meta .sep {
-    margin: 0 5px;
-}
-
-.comment__text {
-    clear: both;
-    margin: 1.8rem 0 0 0;
-    padding: 0;
-}
-
-.comment ul.children {
-    margin: 0;
-    padding: 1.8rem 0 0 0;
-}
-
-.comment ul.children li {
-    padding-left: 5%;
-    padding-top: 1.8rem;
-}
-
-
-/* comments form
- * ---------------------------- */
-
-#comments .respond {
-    padding-top: 4.2rem;
-}
-
-#comments form {
-    padding-top: 3rem;
-}
-
-#comments form .form-field {
-    margin-bottom: 3.9rem;
-}
-
-
-/* ------------------------------------------------------------------- 
- * responsive:
- * comments
- * ------------------------------------------------------------------- */
-
-@media only screen and (max-width: 800px) {
-    #comments form button {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #comments h3 {
-        text-align: center;
-    }
-    .commentlist > .comment {
-        padding-left: 0;
-    }
-    .commentlist .comment__avatar {
-        display: none;
-    }
-}
