@@ -529,11 +529,9 @@ form,
  * # buttons 
  *
  * ------------------------------------------------------------------- */
-
-.btn, button, 
-input[type="submit"], 
-input[type="reset"], 
-input[type="button"] {
+ 
+.btn, button 
+{
     display: inline-block;
     font-family: "montserrat-semibold", sans-serif;
     font-size: 1.2rem;
@@ -555,14 +553,7 @@ input[type="button"] {
 }
 
 .btn:hover, 
-button:hover, 
-input[type="submit"]:hover, 
-input[type="reset"]:hover, 
-input[type="button"]:hover, 
-.btn:focus, button:focus, 
-input[type="submit"]:focus, 
-input[type="reset"]:focus, 
-input[type="button"]:focus {
+button:hover {
     background-color: #b8b8b8;
     border-color: #b8b8b8;
     color: #000000;
@@ -638,16 +629,120 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0;
 }
 
+/* View Demo Button
+ * ------------------------------------------------- */
+ :root {
+    --theme: #71818e; 
+    --active-bg: #71818e; 
+    --hover-color: white; 
+}
+
+.demo-btn {
+    border: 2px solid var(--theme);
+    animation: 0.5s collision ease-in;
+    overflow: hidden;
+    transition: 0.3s 0.1s;
+    position: relative; 
+    background-color: transparent;
+}
+
+/* Active state styles */
+.demo-btn:active {
+    transform: translateX(100px);
+    background-color: var(--active-bg);
+}
+
+
+.demo-btn p {
+    position: relative;
+    color: var(--theme);
+    font-weight: 700;
+    font-size: 1.2rem;
+    z-index: 5;
+    transition: color 1s ease-in-out; 
+}
+
+
+.demo-btn:hover p {
+    color: var(--hover-color); 
+}
+
+
+.demo-btn::before,
+.demo-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--theme);
+}
+
+.demo-btn::before {
+    left: -30%; 
+}
+
+.demo-btn::after {
+    left: 125%; 
+}
+
+.demo-btn:hover::before {
+    animation: collisionLeft 1s both alternate;
+}
+
+.demo-btn:hover::after {
+    animation: collisionRight 1s both alternate;
+}
+
+@keyframes collisionLeft {
+    0% {
+        left: -30%;
+        width: 20px;
+        height: 20px;
+    }
+    50% {
+        left: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    100% {
+        left: 50%;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@keyframes collisionRight {
+    0% {
+        left: 125%;
+        width: 20px;
+        height: 20px;
+    }
+    50% {
+        left: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    100% {
+        left: 50%;
+        width: 300px;
+        height: 300px;
+    }
+}
+
 
 
 /* =================================================================== 
- * # additional components - (_others.scss)
+ * # additional components 
  *
  * ------------------------------------------------------------------- */
 
 
 /* ------------------------------------------------------------------- 
- * ## alert box - (_alert-box.scss)
+ * ## alert box 
  * ------------------------------------------------------------------- */
 
 .alert-box {
@@ -693,7 +788,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 
 /* ------------------------------------------------------------------- 
- * ## additional typo styles - (_additional-typo.scss)
+ * ## additional typo styles 
  * ------------------------------------------------------------------- */
 
 
@@ -739,270 +834,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-left: -0.2em;
 }
 
-
-/* dictionary definition style 
- * ----------------------------------------------- */
-
-.dictionary-style dt {
-    display: inline;
-    counter-reset: definitions;
-}
-
-.dictionary-style dt + dt:before {
-    content: ", ";
-    margin-left: -0.2em;
-}
-
-.dictionary-style dd {
-    display: block;
-    counter-increment: definitions;
-}
-
-.dictionary-style dd:before {
-    content: counter(definitions, decimal) ". ";
-}
-
-
-/** 
- * Pull Quotes
- * -----------
- * markup:
- *
- * <aside class="pull-quote">
- *		<blockquote>
- *			<p></p>
- *		</blockquote>
- *	</aside>
- *
- * --------------------------------------------------------------------- */
-
-.pull-quote {
-    position: relative;
-    padding: 2.1rem 3rem 2.1rem 0px;
-}
-
-.pull-quote:before, .pull-quote:after {
-    height: 1em;
-    position: absolute;
-    font-size: 10rem;
-    font-family: Arial, Sans-Serif;
-    color: rgba(0, 0, 0, 0.15);
-}
-
-.pull-quote:before {
-    content: "\201C";
-    top: -3.6rem;
-    left: 0;
-}
-
-.pull-quote:after {
-    content: '\201D';
-    bottom: 3.6rem;
-    right: 0;
-}
-
-.pull-quote blockquote {
-    margin: 0;
-}
-
-.pull-quote blockquote:before {
-    content: none;
-}
-
-
-/** 
- * Stats Tab
- * ---------
- * markup:
- *
- * <ul class="stats-tabs">
- *		<li><a href="#">[value]<em>[name]</em></a></li>
- *	</ul>
- *
- * Extend this object into your markup.
- *
- * --------------------------------------------------------------------- */
-
-.stats-tabs {
-    padding: 0;
-    margin: 3rem 0;
-}
-
-.stats-tabs li {
-    display: inline-block;
-    margin: 0 1.5rem 3rem 0;
-    padding: 0 1.5rem 0 0;
-    border-right: 1px solid rgba(13, 10, 11, 0.15);
-}
-
-.stats-tabs li:last-child {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-.stats-tabs li a {
-    display: inline-block;
-    font-size: 2.5rem;
-    font-family: "montserrat-semibold", sans-serif;
-    border: none;
-    color: #151515;
-}
-
-.stats-tabs li a:hover {
-    color: #71818e;
-}
-
-.stats-tabs li a em {
-    display: block;
-    margin: .6rem 0 0 0;
-    font-size: 1.4rem;
-    font-family: "montserrat-regular", sans-serif;
-    color: #6c6c6c;
-}
-
-
-/* ------------------------------------------------------------------- 
- * ## skillbars - (_skillbars.scss)
- * ------------------------------------------------------------------- */
-
-.skill-bars {
-    list-style: none;
-    margin: 6rem 0 3rem;
-}
-
-.skill-bars li {
-    height: .6rem;
-    background: #c9c9c9;
-    width: 100%;
-    margin-bottom: 6.9rem;
-    padding: 0;
-    position: relative;
-}
-
-.skill-bars li strong {
-    position: absolute;
-    left: 0;
-    top: -3rem;
-    font-family: "montserrat-extrabold", sans-serif;
-    color: #0D0A0B;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-}
-
-.skill-bars li .progress {
-    background: #000000;
-    background-image: linear-gradient(to right, #191A3F, #2d462c);
-    position: relative;
-    height: 100%;
-}
-
-.skill-bars li .progress span {
-    position: absolute;
-    right: 0;
-    top: -3.6rem;
-    display: block;
-    font-family: "montserrat-regular", sans-serif;
-    color: #FFFFFF;
-    font-size: 1.1rem;
-    line-height: 1;
-    background: #000000;
-    padding: .6rem .6rem;
-    border-radius: 3px;
-}
-
-.skill-bars li .progress span::after {
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    margin-left: -5px;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    border-top: 5px solid #000000;
-    content: "";
-}
-
-.skill-bars li .percent5 {
-    width: 5%;
-}
-
-.skill-bars li .percent10 {
-    width: 10%;
-}
-
-.skill-bars li .percent15 {
-    width: 15%;
-}
-
-.skill-bars li .percent20 {
-    width: 20%;
-}
-
-.skill-bars li .percent25 {
-    width: 25%;
-}
-
-.skill-bars li .percent30 {
-    width: 30%;
-}
-
-.skill-bars li .percent35 {
-    width: 35%;
-}
-
-.skill-bars li .percent40 {
-    width: 40%;
-}
-
-.skill-bars li .percent45 {
-    width: 45%;
-}
-
-.skill-bars li .percent50 {
-    width: 50%;
-}
-
-.skill-bars li .percent55 {
-    width: 55%;
-}
-
-.skill-bars li .percent60 {
-    width: 60%;
-}
-
-.skill-bars li .percent65 {
-    width: 65%;
-}
-
-.skill-bars li .percent70 {
-    width: 70%;
-}
-
-.skill-bars li .percent75 {
-    width: 75%;
-}
-
-.skill-bars li .percent80 {
-    width: 80%;
-}
-
-.skill-bars li .percent85 {
-    width: 85%;
-}
-
-.skill-bars li .percent90 {
-    width: 90%;
-}
-
-.skill-bars li .percent95 {
-    width: 95%;
-}
-
-.skill-bars li .percent100 {
-    width: 100%;
-}
 
 
 
