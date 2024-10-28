@@ -1411,13 +1411,24 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 
-.s-home {
+ .s-home {
     width: 100%;
     height: 100%;
     min-height: 786px;
     background-color: transparent;
     position: relative;
     display: table;
+    overflow: hidden; 
+}
+
+.s-home .background-image {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: 0; 
 }
 
 .s-home .shadow-overlay {
@@ -1426,11 +1437,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .8;
-    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent 0%, rgba(19, 25, 34, 0.975) 100%);
+    
 }
 
 .s-home .overlay {
@@ -1439,13 +1448,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .5;
-    background-color: #a7ccee;
+    opacity: 0.6;
+    
 }
 
 .no-js .s-home {
     background: #0D0A0B;
 }
+
 
 
 /* ------------------------------------------------------------------- 
