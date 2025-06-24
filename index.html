@@ -56,29 +56,10 @@
 
    <!-- home
    ================================================== -->
-   <section id="home" class="s-home page-hero target-section">
+   <section id="home" class="s-home page-hero target-section"> <!-- data-parallax="scroll" data-image-src="" data-natural-width=3000 data-natural-height=2000 data-position-y=center (code to add image)-->
 
-  <div class="pixel-background" id="pixelBackground"></div>
-
-<script>
-	const pixelBackground = document.getElementById('pixelBackground');
-	const numPixels = 5000; 
-
-	for (let i = 0; i < numPixels; i++) {
-		const pixel = document.createElement('div');
-		pixel.className = 'pixel';
-		const randomDelay = Math.random() * 5; 
-		pixel.style.animationDelay = `${randomDelay}s`;
-
-		pixelBackground.appendChild(pixel);
-	}
-</script>
-
-
-
-    <div class="overlay"></div>
-    <div class="shadow-overlay"></div>
-
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
 
         <div class="home-content">
 
