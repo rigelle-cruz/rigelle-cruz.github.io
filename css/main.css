@@ -1436,41 +1436,52 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 
 .s-home {
-    width: 100%;
-    height: 100%;
-    min-height: 786px;
-    background-color: transparent;
-    position: relative;
-    display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 786px;
+  background-color: transparent;
+  position: relative;
+  display: table;
 }
 
 .s-home .shadow-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .8;
-    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: -moz-linear-gradient(
+    top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 }
 
 .s-home .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .5;
-    background-color: #a7ccee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #a7ccee;
 }
 
 .no-js .s-home {
   background: #0d0a0b;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## home content - (_site-layout.scss) 
@@ -3594,5 +3605,137 @@ article.blog-single .blog-content {
   }
   .blog-content__all .btn {
     width: 100%;
+  }
+}
+
+/* About section: skills title */
+.skills-title {
+  font-family: 'montserrat-semibold', sans-serif;
+  font-size: 2.2rem;
+  color: #191a3f;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.skills-list-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 600px;
+  width: 100%;
+}
+
+.skills-list li {
+  background: #f7f9fa;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.6rem;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(113, 129, 142, 0.07);
+  transition: background 0.2s;
+}
+
+.skills-list li:hover {
+  background: #eaf1f7;
+}
+
+.skills-category {
+  font-family: 'montserrat-bold', sans-serif;
+  color: #71818e;
+  margin-right: 0.5rem;
+}
+
+.skills-note {
+  font-size: 1.3rem;
+  color: #71818e;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-list-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-list {
+    max-width: 100%;
+    font-size: 1.4rem;
+  }
+  .skills-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* About section: two-column layout for paragraph and skills */
+.s-about .section-intro {
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.s-about .col-full {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.s-about .about-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4rem;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.s-about .about-flex .about-desc {
+  flex: 1 1 45%;
+  min-width: 320px;
+  max-width: 600px;
+}
+.s-about .about-flex .skills-col {
+  flex: 1 1 55%;
+  min-width: 320px;
+  max-width: 700px;
+}
+.skills-list-wrapper {
+  justify-content: flex-start;
+}
+.skills-list {
+  font-size: 1.7rem;
+}
+.skills-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.skills-note {
+  text-align: left;
+}
+@media only screen and (max-width: 1100px) {
+  .s-about .about-flex {
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .s-about .about-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  .s-about .about-flex .about-desc,
+  .s-about .about-flex .skills-col {
+    max-width: 100%;
+    min-width: 0;
   }
 }
